@@ -31,7 +31,7 @@ By default, the needle is pointing to 70, thus in order to move it you have to u
 
 ```vue
 <template>
-  <vue-gauge :refid="'type-unique-id'" :options="{'needleValue':85,'arcDelimiters':85]}"></vue-gauge>
+  <vue-gauge :refid="'type-unique-id'" :options="{'needleValue':85,'arcDelimiters':[85]}"></vue-gauge>
 </template>
 ```
 
@@ -39,7 +39,7 @@ You can also change others gauge options value like:
 
 ```vue
 <template>
-  <vue-gauge :refid="'type-unique-id'" :options="{'needleValue':85,'arcDelimiters':70, 'hasNeedle':false]}"></vue-gauge>
+  <vue-gauge :refid="'type-unique-id'" :options="{'needleValue':85,'arcDelimiters':[10,36,78], 'hasNeedle':false]}"></vue-gauge>
 </template>
 
 ```
@@ -69,7 +69,7 @@ You can also change others gauge options value like:
 
 Some examples of what you can get out of the library using different properties:
 
-![Gauge Examples](https://github.com/Md-Razu-Haolader/Vue-Gauge/demo/gauges.png 'Gauge Examples')
+![Gauge Examples](https://github.com/Md-Razu-Haolader/Vue-Gauge/blob/master/demo/gauges.png 'Gauge Examples')
 
 
 
