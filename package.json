@@ -1,9 +1,8 @@
 {
   "name": "vue-gauge",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "VueJs Gauge Plugin",
   "main": "index.vue",
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Md-Razu-Haolader/Vue-Gauge.git"
