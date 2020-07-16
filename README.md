@@ -24,9 +24,13 @@ npm install vue-gauge
     components: { VueGauge },
   }
 
-Or to load as global component
-Vue.component('vue-gauge', VueGauge);
+</script>
 
+Or to load as global component
+
+<script>
+  import VueGauge from 'vue-gauge';
+  Vue.component('vue-gauge', VueGauge);
 </script>
 ```
 
