@@ -1,0 +1,23 @@
+{
+  "name": "vue-gauge",
+  "version": "1.0.0",
+  "description": "VueJs Gauge Plugin",
+  "main": "index.vue",
+  
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Md-Razu-Haolader/Vue-Gauge.git"
+  },
+  "keywords": [
+    "npm",
+    "vue-gauge",
+    "vuejs-gauge",
+    "vue-speedometer"
+  ],
+  "author": "Md. Razu Haolader",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Md-Razu-Haolader/Vue-Gauge/issues"
+  },
+  "homepage": "https://github.com/Md-Razu-Haolader/Vue-Gauge#readme"
+}
