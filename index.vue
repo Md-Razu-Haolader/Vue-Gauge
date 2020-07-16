@@ -6,7 +6,7 @@ https://recogizer.github.io/gauge-chart/docs/
 </template>
 <script>
 
-import {GaugeChart} from './assets/bundle.js';
+let GaugeChart = require('./assets/bundle.js');
 
 export default {
     name: 'vue-gauge',

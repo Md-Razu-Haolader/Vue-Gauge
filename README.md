@@ -23,6 +23,10 @@ npm install vue-gauge
   export default {
     components: { VueGauge },
   }
+
+Or to load as global component
+Vue.component('vue-gauge', VueGauge);
+
 </script>
 ```
 
