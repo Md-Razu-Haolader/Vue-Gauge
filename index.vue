@@ -33,8 +33,15 @@ export default {
                 let element = document.querySelector("#"+this.gaugeId );
                 
                 // Drawing and updating the chart
-                GaugeChart.gaugeChart(element, config.chartWidth, config).updateNeedle(config.needleValue); 
+                this.gauge = GaugeChart.gaugeChart(element, config.chartWidth, config);
+                this.gauge.updateNeedle(config.needleValue); 
             }  
+        },
+        reloadPlugin() {
+            if (this.gauge) {
+                this.gauge.removeGauge();
+            }
+            this.initPlugin(this.options);
         }
     },
     computed: {
@@ -45,5 +52,13 @@ export default {
             return "vue-gauge";
         }
     },
+    watch: {
+        options: function(newOptions, oldOptions) {
+            // Reload gauge on nedleValue change
+            if (newOptions.needleValue != oldOptions.needleValue) {
+                this.reloadPlugin();
+            }
+        }
+    }
 }
 </script>
