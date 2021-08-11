@@ -33,8 +33,15 @@ export default {
                 let element = document.querySelector("#"+this.gaugeId );
                 
                 // Drawing and updating the chart
-                GaugeChart.gaugeChart(element, config.chartWidth, config).updateNeedle(config.needleValue); 
+                this.gauge = GaugeChart.gaugeChart(element, config.chartWidth, config);
+                this.gauge.updateNeedle(config.needleValue); 
             }  
+        },
+        reloadPlugin() {
+            if (this.gauge) {
+                this.gauge.removeGauge();
+            }
+            this.initPlugin(this.options);
         }
     },
     computed: {
@@ -45,5 +52,24 @@ export default {
             return "vue-gauge";
         }
     },
+    watch: {
+        options: function(newOptions, oldOptions) {
+            
+            // Reload gauge on nedleValue change
+            if (newOptions.needleValue != oldOptions.needleValue) {
+
+                // If you update centralLabel option, you have to reload GaugeChart instance
+                if (newOptions.centralLabel != oldOptions.centralLabel) {
+                    this.reloadPlugin();
+                }
+
+                // Otherwise updateNeedle is called
+                else {
+                    this.gauge.updateNeedle(newOptions.needleValue);
+                }
+                
+            }
+        }
+    }
 }
 </script>
