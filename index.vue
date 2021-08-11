@@ -54,9 +54,20 @@ export default {
     },
     watch: {
         options: function(newOptions, oldOptions) {
+            
             // Reload gauge on nedleValue change
             if (newOptions.needleValue != oldOptions.needleValue) {
-                this.reloadPlugin();
+
+                // If you update centralLabel option, you have to reload GaugeChart instance
+                if (newOptions.centralLabel != oldOptions.centralLabel) {
+                    this.reloadPlugin();
+                }
+
+                // Otherwise updateNeedle is called
+                else {
+                    this.gauge.updateNeedle(newOptions.needleValue);
+                }
+                
             }
         }
     }
